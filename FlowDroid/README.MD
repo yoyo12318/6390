@@ -101,6 +101,8 @@ the MainClass.initializeCommandLineOptions()" method in the source code (module 
 If you want to run the batch runner to analyze multiple APKs, you can use the following Maven command (make sure to run this from the `soot-infoflow-cmd` directory):
 
 ```
+mvn clean install -DskipTests
+cd soot-infoflow-cmd
 mvn exec:java -D"exec.mainClass"="soot.jimple.infoflow.cmd.FlowDroidBatchRunner"
 ```
 
