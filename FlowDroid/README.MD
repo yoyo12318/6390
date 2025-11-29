@@ -103,7 +103,13 @@ If you want to run the batch runner to analyze multiple APKs, you can use the fo
 ```
 mvn clean install -DskipTests
 cd soot-infoflow-cmd
-mvn exec:java -D"exec.mainClass"="soot.jimple.infoflow.cmd.FlowDroidBatchRunner"
+mvn exec:java -D"exec.mainClass"="soot.jimple.infoflow.cmd.FlowDroidBatchRunner" (Windows CMD)
+mvn exec:java '-Dexec.mainClass=soot.jimple.infoflow.cmd.FlowDroidBatchRunner' (Linux / macOS / PowerShell)
+```
+
+```
+$env:MAVEN_OPTS="-Xmx8g"; mvn clean install -DskipTests
+java -Xmx8g -cp target/soot-infoflow-cmd-jar-with-dependencies.jar soot.jimple.infoflow.cmd.FlowDroidBatchRunner
 ```
 
 ### Configuring FlowDroid for Performance
