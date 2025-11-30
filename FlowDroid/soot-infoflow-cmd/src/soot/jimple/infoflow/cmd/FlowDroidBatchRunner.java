@@ -85,10 +85,6 @@ public class FlowDroidBatchRunner {
                     config.getAnalysisFileConfig().setSourceSinkFile(new File(sourceSinkFile));
                     config.getAnalysisFileConfig().setOutputFile(tempXml.getCanonicalPath());
                     
-                    // Increase timeouts to avoid InterruptedException during complex path reconstruction
-                    config.getPathConfiguration().setPathReconstructionTimeout(1800L); // 30 minutes
-                    config.setDataFlowTimeout(3600L); // 60 minutes
-                    
                     // Enable some common options (similar to defaults or what might be needed)
                     // config.setEnableImplicitFlows(false);
                     // config.setEnableStaticFieldTracking(true);

@@ -108,6 +108,7 @@ mvn exec:java '-Dexec.mainClass=soot.jimple.infoflow.cmd.FlowDroidBatchRunner' (
 ```
 
 ```
+cd soot-infoflow-cmd
 $env:MAVEN_OPTS="-Xmx8g"; mvn clean install -DskipTests
 java -Xmx8g -cp target/soot-infoflow-cmd-jar-with-dependencies.jar soot.jimple.infoflow.cmd.FlowDroidBatchRunner
 ```
@@ -147,26 +148,3 @@ InfoflowResults results = app.runInfoflow();
 
 The data flow analysis uses the default StubDroid library summaries. In the default configuration, these summaries are stored in
 the ``summariesManual`` folder and there is no need to change that.
-
-## Publications
-
-If you want to read the details on how FlowDroid works, <a href="http://tuprints.ulb.tu-darmstadt.de/5937/">the PhD thesis of
-Steven Arzt</a> is a good place to start.
-
-## Contributing to FlowDroid
-
-Contributions are always welcome. FlowDroid is an open source project that we published in the hope that it will be useful to
-the research community as a whole. If you have a new feature or a bug fix that you would like to see in the official code
-repository, please open a merge request here on Github and contact us (see below) with a short description of what you have
-done.
-
-## License
-
-FlowDroid is licensed
-under the LGPL license, see LICENSE file. This basically means that you are free to use the tool (even in commercial, closed-source
-projects). However, if you extend or modify the tool, you must make your changes available under the LGPL as well. This ensures that
-we can continue to improve the tool as a community effort.
-
-## Contact
-
-If you experience any issues, you can ask for help on the Soot mailing list. You can also contact us at Steven.Arzt@sit.fraunhofer.de.
