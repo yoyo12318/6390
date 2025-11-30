@@ -108,6 +108,7 @@ mvn exec:java '-Dexec.mainClass=soot.jimple.infoflow.cmd.FlowDroidBatchRunner' (
 ```
 
 ```
+cd soot-infoflow-cmd
 $env:MAVEN_OPTS="-Xmx8g"; mvn clean install -DskipTests
 java -Xmx8g -cp target/soot-infoflow-cmd-jar-with-dependencies.jar soot.jimple.infoflow.cmd.FlowDroidBatchRunner
 ```
